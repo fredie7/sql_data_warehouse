@@ -6,12 +6,13 @@ USE hotel_data_warehouse;
 -- Create bronze_customer table
 CREATE TABLE IF NOT EXISTS bronze_customers(
 customer_id INT NOT NULL PRIMARY KEY,
-customer_name VARCHAR(50),
+name VARCHAR(50),
 email VARCHAR(50),
 phone_number VARCHAR(50),
-loyality_status VARCHAR(50),
+loyalty_status VARCHAR(50),
 nationality VARCHAR(50)
 );
+-- drop table bronze_customers;
 
 -- Create bronze_menu_orders table
 CREATE TABLE IF NOT EXISTS bronze_menu_orders(
@@ -25,12 +26,13 @@ total_price INT
 -- Create bronze_payments table
 CREATE TABLE IF NOT EXISTS bronze_payments(
 payment_id INT NOT NULL PRIMARY KEY,
-reservtion_id INT,
+reservation_id INT,
 payment_method VARCHAR(50),
 total_paid INT,
 payment_date DATE,
-discount INT
+discount_applied INT
 );
+-- drop table bronze_payments;
 
 -- Create bronze_reservations table
 CREATE TABLE IF NOT EXISTS bronze_reservations(
@@ -52,3 +54,15 @@ bed_type VARCHAR(50),
 price INT,
 room_status VARCHAR(50)
 );
+
+CREATE TABLE IF NOT EXISTS bronze_staffs(
+staff_id INT NOT NULL PRIMARY KEY,
+reservtion_id INT,
+payment_method VARCHAR(50),
+total_paid INT,
+payment_date DATE,
+discount INT
+);
+
+-- Confirm that tables have been created
+show tables;
