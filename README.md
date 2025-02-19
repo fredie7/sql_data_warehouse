@@ -1,4 +1,4 @@
-# A Hotel Data Warehouse Project
+# A Medallion Achitectural Data Warehouse Project
 #### Objective
 Develop a data warehouse usine MYSQL to consolidate reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
 
