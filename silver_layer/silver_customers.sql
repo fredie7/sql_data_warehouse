@@ -11,7 +11,7 @@ WHERE REGEXP_LIKE(nationality, '[\(\)\{\}]');
 
 -- TRANSFORM AND LOAD THE silver_customers TABLE
 
-use hotel_data_warehouse;
+USE hotel_data_warehouse;
 
 CREATE TABLE IF NOT EXISTS silver_customers(
 customer_id INT NOT NULL PRIMARY KEY,
@@ -22,7 +22,8 @@ loyalty_status VARCHAR(50),
 nationality VARCHAR(50)
 );
 
-truncate table silver_customers;
+-- Truncate  before insert
+TRUNCATE table silver_customers;
 INSERT INTO silver_customers
 SELECT customer_id,customer_name,
 LOWER(TRIM(email)) as email,
