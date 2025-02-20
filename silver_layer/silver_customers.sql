@@ -1,4 +1,8 @@
 -- QUALITY CHECKS
+
+-- Check for duplicates
+SELECT customer_id, COUNT(*) FROM bronze_customers GROUP BY order_id HAVING COUNT(*) > 1;
+
 -- Check for unnecessary spaces
 SELECT email FROM bronze_customers WHERE email != TRIM(email);
 
