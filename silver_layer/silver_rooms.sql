@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS silver_rooms(
 room_id INT NOT NULL PRIMARY KEY,
 room_type VARCHAR(50),
 bed_type VARCHAR(50),
-price INT,
+room_price INT,
 room_status VARCHAR(50)
 );
 
