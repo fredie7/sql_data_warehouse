@@ -10,7 +10,8 @@ name VARCHAR(50),
 email VARCHAR(50),
 phone_number VARCHAR(50),
 loyalty_status VARCHAR(50),
-nationality VARCHAR(50)
+nationality VARCHAR(50),
+created_date DATE DEFAULT (CURRENT_DATE())  
 );
 -- drop table bronze_customers;
 
@@ -20,7 +21,8 @@ order_id INT NOT NULL PRIMARY KEY,
 reservation_id INT,
 menu_item_id INT,
 order_date DATE,
-total_price INT
+total_price INT,
+created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 -- Create bronze_payments table
@@ -30,7 +32,8 @@ reservation_id INT,
 payment_method VARCHAR(50),
 total_paid INT,
 payment_date DATE,
-discount_applied INT
+discount_applied INT,
+created_date DATE DEFAULT (CURRENT_DATE())
 );
 -- drop table bronze_payments;
 
@@ -43,7 +46,8 @@ check_in DATE,
 check_out DATE,
 payment INT,
 total_amount INT,
-reservation_status VARCHAR(50)
+reservation_status VARCHAR(50),
+created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 -- Create bronze_rooms table
@@ -52,7 +56,8 @@ room_id INT NOT NULL PRIMARY KEY,
 room_type VARCHAR(50),
 bed_type VARCHAR(50),
 price INT,
-room_status VARCHAR(50)
+room_status VARCHAR(50),
+created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 CREATE TABLE IF NOT EXISTS bronze_staffs(
@@ -61,7 +66,8 @@ reservtion_id INT,
 payment_method VARCHAR(50),
 total_paid INT,
 payment_date DATE,
-discount INT
+discount INT,
+created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 -- Confirm that tables have been created
