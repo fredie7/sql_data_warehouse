@@ -55,14 +55,14 @@ CREATE TABLE IF NOT EXISTS bronze_rooms(
 room_id INT NOT NULL PRIMARY KEY,
 room_type VARCHAR(50),
 bed_type VARCHAR(50),
-price INT,
+room_price INT,
 room_status VARCHAR(50),
 created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 CREATE TABLE IF NOT EXISTS bronze_staffs(
 staff_id INT NOT NULL PRIMARY KEY,
-reservtion_id INT,
+reservation_id INT,
 payment_method VARCHAR(50),
 total_paid INT,
 payment_date DATE,
