@@ -1,6 +1,6 @@
 INSERT INTO silver_staffs
 SELECT staff_id,
-reservtion_id,
+reservation_id,
 payment_method,
 total_paid,
 payment_date,
