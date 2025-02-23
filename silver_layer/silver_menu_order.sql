@@ -11,12 +11,10 @@ select * from bronze_menu_orders where reservation_id = '' or menu_item_id = '' 
 SELECT order_id, COUNT(*) FROM bronze_menu_orders GROUP BY order_id HAVING COUNT(*) > 1;
 
 -- Create the silver_menu_order table
-CREATE TABLE silver_menu_orders(
+CREATE TABLE silver_orders(
 order_id INT PRIMARY KEY,
 reservation_id INT,
-menu_id INT,
-order_date DATE,
-total_price INT
+order_date DATE
 );
 
 -- drop table silver_menu_orders;
