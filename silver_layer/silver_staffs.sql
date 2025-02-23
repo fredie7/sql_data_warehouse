@@ -1,8 +1,7 @@
+TRUNCATE TABLE silver_staffs;
 INSERT INTO silver_staffs
-SELECT staff_id,
-reservation_id,
-payment_method,
-total_paid,
-payment_date,
-discount 
+SELECT 
+  staff_id,
+	reservation_id,
+	staff_name
 FROM bronze_staffs;
