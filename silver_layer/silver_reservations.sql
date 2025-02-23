@@ -12,8 +12,6 @@ customer_id INT,
 room_id INT,
 check_in DATE,
 check_out DATE,
-payment INT,
-total_amount INT,
 reservation_status VARCHAR(30)
 );
 
