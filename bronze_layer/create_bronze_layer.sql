@@ -16,12 +16,10 @@ created_date DATE DEFAULT (CURRENT_DATE())
 -- drop table bronze_customers;
 
 -- Create bronze_menu_orders table
-CREATE TABLE IF NOT EXISTS bronze_menu_orders(
+CREATE TABLE IF NOT EXISTS bronze_orders(
 order_id INT NOT NULL PRIMARY KEY,
 reservation_id INT,
-menu_item_id INT,
 order_date DATE,
-total_price INT,
 created_date DATE DEFAULT (CURRENT_DATE())
 );
 
@@ -44,8 +42,6 @@ customer_id INT,
 room_id INT,
 check_in DATE,
 check_out DATE,
-payment INT,
-total_amount INT,
 reservation_status VARCHAR(50),
 created_date DATE DEFAULT (CURRENT_DATE())
 );
@@ -63,12 +59,9 @@ created_date DATE DEFAULT (CURRENT_DATE())
 CREATE TABLE IF NOT EXISTS bronze_staffs(
 staff_id INT NOT NULL PRIMARY KEY,
 reservation_id INT,
-payment_method VARCHAR(50),
-total_paid INT,
-payment_date DATE,
-discount INT,
+staff_name VARCHAR(50),
 created_date DATE DEFAULT (CURRENT_DATE())
 );
 
 -- Confirm that tables have been created
-show tables;
+SHOW TABLES;
