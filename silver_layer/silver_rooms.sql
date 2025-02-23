@@ -10,5 +10,5 @@ room_price INT,
 room_status VARCHAR(50)
 );
 
-INSERT INTO silver_rooms
-select * from bronze_rooms limit 10;
+INSERT INTO silver_rooms (room_id, room_type, bed_type, room_price, room_status)
+SELECT room_id, room_type, bed_type, room_price, room_status FROM bronze_rooms;
