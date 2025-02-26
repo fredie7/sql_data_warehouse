@@ -13,20 +13,20 @@ ORDER BY total_spent DESC
 LIMIT 5;
 
 -- Monthly Revenue Breakdown
-SELECT
-	CASE
-		WHEN DATE_FORMAT(payment_date,'%m') = '01' THEN 'January'
-		WHEN DATE_FORMAT(payment_date,'%m') = '02' THEN 'February'
-		WHEN DATE_FORMAT(payment_date,'%m') = '03' THEN 'February'
-		WHEN DATE_FORMAT(payment_date,'%m') = '04' THEN 'April'
-		WHEN DATE_FORMAT(payment_date,'%m') = '05' THEN 'May'
-		WHEN DATE_FORMAT(payment_date,'%m') = '06' THEN 'June'
-		WHEN DATE_FORMAT(payment_date,'%m') = '07' THEN 'July'
-		WHEN DATE_FORMAT(payment_date,'%m') = '08' THEN 'August'
-		WHEN DATE_FORMAT(payment_date,'%m') = '09' THEN 'September'
-		WHEN DATE_FORMAT(payment_date,'%m') = '10' THEN 'October'
-		WHEN DATE_FORMAT(payment_date,'%m') = '11' THEN 'November'
-		WHEN DATE_FORMAT(payment_date,'%m') = '12' THEN 'December'
+SELECT 
+    CASE 
+        WHEN DATE_FORMAT(payment_date, '%m') = '01' THEN 'January'
+        WHEN DATE_FORMAT(payment_date, '%m') = '02' THEN 'February'
+        WHEN DATE_FORMAT(payment_date, '%m') = '03' THEN 'March'
+        WHEN DATE_FORMAT(payment_date, '%m') = '04' THEN 'April'
+        WHEN DATE_FORMAT(payment_date, '%m') = '05' THEN 'May'
+        WHEN DATE_FORMAT(payment_date, '%m') = '06' THEN 'June'
+        WHEN DATE_FORMAT(payment_date, '%m') = '07' THEN 'July'
+        WHEN DATE_FORMAT(payment_date, '%m') = '08' THEN 'August'
+        WHEN DATE_FORMAT(payment_date, '%m') = '09' THEN 'September'
+        WHEN DATE_FORMAT(payment_date, '%m') = '10' THEN 'October'
+        WHEN DATE_FORMAT(payment_date, '%m') = '11' THEN 'November'
+        WHEN DATE_FORMAT(payment_date, '%m') = '12' THEN 'December'
     END AS month, 
     SUM(total_paid) AS total_revenue
 FROM Fact_Reservations
