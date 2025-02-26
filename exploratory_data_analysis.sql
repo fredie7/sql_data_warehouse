@@ -7,7 +7,7 @@ SELECT
     c.customer_name, 
     SUM(f.total_paid) AS total_spent
 FROM fact_reservations f
-JOIN dim_Customers c ON f.customer_id = c.customer_id
+LEFT JOIN dim_Customers c ON f.customer_id = c.customer_id
 GROUP BY c.customer_id, c.customer_name
 ORDER BY total_spent DESC
 LIMIT 5;
@@ -40,7 +40,7 @@ SELECT
     r.room_type, 
     COUNT(f.reservation_id) AS total_bookings
 FROM fact_reservations f
-JOIN dim_Rooms r ON f.room_id = r.room_id
+LEFT JOIN dim_Rooms r ON f.room_id = r.room_id
 GROUP BY r.room_type
 ORDER BY total_bookings DESC;
 
