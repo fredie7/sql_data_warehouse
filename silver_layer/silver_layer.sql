@@ -1,6 +1,7 @@
 -- Use the correct database
 USE hotel_data_warehouse;
 
+-- Automate the data processing with stored procedure
 DELIMITER //
 
 CREATE PROCEDURE LoadSilverTables()
