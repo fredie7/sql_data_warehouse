@@ -25,8 +25,9 @@ SELECT 'ID of Most Frequent or Loyal Customer', (
 	LIMIT 1
 );
 
--- ANALYSIS OF REVENUE TRENDS
--- Top  5 revenure generating customers
+-- MAGNITUDE ANALYSIS: to compare measure values accross different dimensions, identifying key contributors.
+
+-- ANALYSIS OF REVENUE TRENDS: Revenue By Customers(Top  5 revenue generating customers)
 SELECT 
     c.customer_id, 
     c.customer_name, 
@@ -37,7 +38,6 @@ GROUP BY c.customer_id, c.customer_name
 ORDER BY total_spent DESC
 LIMIT 5;
 
--- MAGNITUDE ANALYSIS: to compare measure values accross different dimensions, identifying key contributors.
 -- Monthly Revenue Breakdown(Seasonality Analysis)
 SELECT 
     CASE 
