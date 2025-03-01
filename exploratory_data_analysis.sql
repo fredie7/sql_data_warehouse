@@ -1,5 +1,30 @@
 use hotel_data_warehouse;
 
+-- REPORT TO SHOW KEY METRICS OR BIG NUMBERS
+SELECT 'Total Revenue' AS key_metric, SUM(total_paid) AS measure_value FROM fact_reservations
+UNION ALL
+SELECT 'Total Orders', COUNT(DISTINCT order_id) FROM fact_reservations
+UNION ALL
+SELECT 'Total Reservations', COUNT(DISTINCT reservation_id) FROM fact_reservations
+UNION ALL
+SELECT 'Average Room Price', ROUND(AVG(room_price),2) FROM fact_reservations
+UNION ALL
+SELECT 'Most Popular Payment Method', (
+	SELECT payment_method 
+	FROM dim_payments 
+	GROUP BY payment_method 
+	ORDER BY COUNT(payment_method) DESC 
+	LIMIT 1
+)
+UNION ALL
+SELECT 'ID of Most Frequent or Loyal Customer', (
+	SELECT customer_id 
+	FROM fact_reservations 
+	GROUP BY customer_id 
+	ORDER BY COUNT(reservation_id) DESC 
+	LIMIT 1
+);
+
 -- ANALYSIS OF REVENUE TRENDS
 -- Top  5 revenure generating customers
 SELECT 
