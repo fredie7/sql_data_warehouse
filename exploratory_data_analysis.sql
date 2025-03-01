@@ -27,7 +27,7 @@ SELECT 'ID of Most Frequent or Loyal Customer', (
 
 -- MAGNITUDE ANALYSIS: to compare measure values accross different dimensions, identifying key contributors.
 
--- ANALYSIS OF REVENUE TRENDS: Revenue By Customers(Top  5 revenue generating customers)
+-- ANALYSIS OF REVENUE TRENDS: Revenue By Customers
 SELECT 
     c.customer_id, 
     c.customer_name, 
@@ -35,8 +35,7 @@ SELECT
 FROM fact_reservations f
 LEFT JOIN dim_Customers c ON f.customer_id = c.customer_id
 GROUP BY c.customer_id, c.customer_name
-ORDER BY total_spent DESC
-LIMIT 5;
+ORDER BY total_spent DESC;
 
 -- Monthly Revenue Breakdown(Seasonality Analysis)
 SELECT 
@@ -83,6 +82,27 @@ FROM fact_reservations
 JOIN dim_customers ON fact_reservations.customer_id = dim_customers.customer_id
 GROUP BY nationality
 ORDER BY total_reservations DESC;
+
+-- RANKING ANALYSIS
+
+-- Top 10 Customers By Average Spend
+SELECT customer_id, 
+       ROUND(AVG(total_paid),2) AS avg_spending,
+       RANK() OVER (ORDER BY AVG(total_paid) DESC) AS rank_spend
+FROM fact_reservations
+GROUP BY customer_id
+ORDER BY rank_spend
+LIMIT 10;
+
+-- Top 5 Most Frequent Customers By Reservation
+SELECT f.customer_id, dc.customer_name, COUNT(reservation_id) AS total_reservations,
+       DENSE_RANK() OVER (ORDER BY COUNT(reservation_id) DESC) AS reservation_hierarchy
+FROM fact_reservations f
+LEFT JOIN dim_customers dc
+ON f.customer_id = dc.customer_id
+GROUP BY customer_id
+ORDER BY total_reservations DESC
+LIMIT 5;
 
 
 -- Percentage trend of booked rooms
