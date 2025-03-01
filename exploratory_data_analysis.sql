@@ -37,7 +37,8 @@ GROUP BY c.customer_id, c.customer_name
 ORDER BY total_spent DESC
 LIMIT 5;
 
--- Monthly Revenue Breakdown
+-- MAGNITUDE ANALYSIS: to compare measure values accross different dimensions, identifying key contributors.
+-- Monthly Revenue Breakdown(Seasonality Analysis)
 SELECT 
     CASE 
         WHEN DATE_FORMAT(payment_date, '%m') = '01' THEN 'January'
@@ -59,8 +60,7 @@ WHERE total_paid IS NOT NULL
 GROUP BY month
 ORDER BY total_revenue DESC;
 
--- ROOM OCCUPANCY TRENDS
--- Most frequently booked rooms
+-- ROOM OCCUPANCY TRENDS: Total bookings by room type or Most frequently booked rooms
 SELECT 
     r.room_type, 
     COUNT(f.reservation_id) AS total_bookings
@@ -68,6 +68,22 @@ FROM fact_reservations f
 LEFT JOIN dim_Rooms r ON f.room_id = r.room_id
 GROUP BY r.room_type
 ORDER BY total_bookings DESC;
+
+-- CUSTOMER BEHAVIOUR: Total bookings by customer
+SELECT c.customer_id, c.customer_name, COUNT(f.reservation_id) AS total_bookings
+FROM Fact_Reservations f
+LEFT JOIN dim_customers c
+ON f.customer_id = c.customer_id
+GROUP BY customer_id
+ORDER BY total_bookings DESC;
+
+-- Total Number of Reservations By Nationality
+SELECT nationality, COUNT(reservation_id) AS total_reservations
+FROM fact_reservations
+JOIN dim_customers ON fact_reservations.customer_id = dim_customers.customer_id
+GROUP BY nationality
+ORDER BY total_reservations DESC;
+
 
 -- Percentage trend of booked rooms
 SELECT
@@ -81,7 +97,7 @@ WHERE r.room_status = 'Occupied'
 GROUP BY r.room_type
 ORDER BY occupancy_rate DESC;
 
---
+-- Compare total number of new customers to returning customers
 SELECT 
     COUNT(DISTINCT CASE WHEN total_bookings = 1 THEN customer_id END) AS new_customers,
     COUNT(DISTINCT CASE WHEN total_bookings > 1 THEN customer_id END) AS returning_customers
@@ -90,15 +106,6 @@ FROM (
     FROM Fact_Reservations
     GROUP BY customer_id
 ) AS subquery;
-
--- CUSTOMER BEHAVIOUR
--- Total bookings by customer
-SELECT c.customer_id, c.customer_name, COUNT(f.reservation_id) AS total_bookings
-FROM Fact_Reservations f
-LEFT JOIN dim_customers c
-ON f.customer_id = c.customer_id
-GROUP BY customer_id
-ORDER BY total_bookings DESC;
 
 -- Find chun or non-repeat customers
 WITH customers AS (
