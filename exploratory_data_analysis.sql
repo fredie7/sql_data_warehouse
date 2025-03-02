@@ -1,3 +1,4 @@
+-- EXPLORE MEASURES
 use hotel_data_warehouse;
 
 -- REPORT TO SHOW KEY METRICS OR BIG NUMBERS
