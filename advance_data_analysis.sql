@@ -67,3 +67,31 @@ ON fr.room_id = rm.room_id
 GROUP BY rm.room_type
 ORDER BY booking_percentage DESC;
 
+-- SEGMENTATION ANALYSIS
+-- Room Segmentation
+SELECT 
+    room_id, 
+    room_type, 
+    room_price, 
+    CASE 
+        WHEN room_price > (SELECT AVG(room_price) FROM dim_rooms) THEN 'Premium'
+        ELSE 'Economy'
+    END AS price_segment
+FROM dim_rooms
+ORDER BY room_price DESC;
+
+-- Customer Segmentation
+SELECT 
+    c.customer_id, 
+    c.customer_name, 
+    COUNT(fr.reservation_id) AS total_reservations, 
+    CASE 
+        WHEN COUNT(fr.reservation_id) >= 5 THEN 'VIP'
+        WHEN COUNT(fr.reservation_id) BETWEEN 2 AND 4 THEN 'Regular'
+        ELSE 'New'
+    END AS customer_segment
+FROM fact_reservations fr
+JOIN dim_customers c ON fr.customer_id = c.customer_id
+GROUP BY c.customer_id, c.customer_name
+ORDER BY total_reservations DESC;
+
