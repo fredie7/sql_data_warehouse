@@ -18,3 +18,40 @@ FROM (
     GROUP BY customer_id, booking_year
 ) AS customer_bookings
 GROUP BY booking_year;
+
+-- CUMULATIVE ANALYSIS - aggregates the progress of data over time
+-- Customer Growth & Revenue Generated Over Time
+SELECT 
+    DATE_FORMAT(check_in, '%Y-%m') AS month_period, 
+    COUNT(DISTINCT customer_id) AS new_customers, 
+    SUM(COUNT(DISTINCT customer_id)) OVER (ORDER BY DATE_FORMAT(check_in, '%Y-%m')) AS cumulative_customers,
+    SUM(dp.total_paid) AS revenue_generated
+FROM fact_reservations
+LEFT JOIN dim_payments dp
+ON fact_reservations.payment_id = dp.payment_id
+GROUP BY month_period
+ORDER BY month_period;
+
+-- PERFORMANCE ANALYSIS - Compare Average Perfromance By Year
+WITH yearly_performance AS (
+    SELECT 
+        YEAR(payment_date) AS year, 
+        SUM(total_paid) AS current_performance, 
+        AVG(SUM(total_paid)) OVER () AS avg_performance
+    FROM fact_reservations
+    WHERE total_paid IS NOT NULL
+    GROUP BY year
+)
+SELECT 
+    year, 
+    current_performance, 
+    ROUND(avg_performance,2), 
+    current_performance - avg_performance AS difference_in_avg, 
+    CASE 
+        WHEN current_performance > avg_performance THEN 'Above Average' 
+        WHEN current_performance < avg_performance THEN 'Below Average' 
+        ELSE 'On Average' 
+    END AS avg_change
+FROM yearly_performance
+ORDER BY year;
+
