@@ -55,3 +55,15 @@ SELECT
 FROM yearly_performance
 ORDER BY year;
 
+-- PART TO WHOLE ANALYSIS: Areas of highest impact
+-- Room Type Demand
+SELECT 
+    rm.room_type, 
+    COUNT(fr.room_id) AS total_bookings, 
+    CONCAT(ROUND((COUNT(fr.room_id) / (SELECT COUNT(room_id) FROM fact_reservations) * 100),2),"","%") AS booking_percentage
+FROM fact_reservations fr
+JOIN dim_rooms rm 
+ON fr.room_id = rm.room_id
+GROUP BY rm.room_type
+ORDER BY booking_percentage DESC;
+
