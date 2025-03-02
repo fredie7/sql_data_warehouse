@@ -118,17 +118,7 @@ WHERE r.room_status = 'Occupied'
 GROUP BY r.room_type
 ORDER BY occupancy_rate DESC;
 
--- Compare total number of new customers to returning customers
-SELECT 
-    COUNT(DISTINCT CASE WHEN total_bookings = 1 THEN customer_id END) AS new_customers,
-    COUNT(DISTINCT CASE WHEN total_bookings > 1 THEN customer_id END) AS returning_customers
-FROM (
-    SELECT customer_id, COUNT(reservation_id) AS total_bookings
-    FROM Fact_Reservations
-    GROUP BY customer_id
-) AS subquery;
-
--- Find chun or non-repeat customers
+-- Find chun or non-repeat customers By Name
 WITH customers AS (
     SELECT 
         c.customer_id, 
