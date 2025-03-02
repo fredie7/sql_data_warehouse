@@ -45,8 +45,8 @@ WITH yearly_performance AS (
 SELECT 
     year, 
     current_performance, 
-    ROUND(avg_performance,2), 
-    current_performance - avg_performance AS difference_in_avg, 
+    ROUND(avg_performance,2) AS average_performance, 
+    ROUND(current_performance - avg_performance,2) AS difference_in_avg, 
     CASE 
         WHEN current_performance > avg_performance THEN 'Above Average' 
         WHEN current_performance < avg_performance THEN 'Below Average' 
