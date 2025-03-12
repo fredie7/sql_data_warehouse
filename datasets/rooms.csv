@@ -1,0 +1,101 @@
+room_id,room_type,bed_type,room_price,room_status
+1,Double,King,67,Available
+2,Deluxe,Twin,499,Under Maintenance
+3,Suite,Double,471,Occupied
+4,Single,Single,53,Available
+5,Double,Queen,477,Under Maintenance
+6,Double,Double,272,Available
+7,Single,Double,478,Available
+8,Penthouse,Queen,201,Available
+9,Single,Single,425,Occupied
+10,Deluxe,Double,351,Under Maintenance
+11,Suite,King,360,Occupied
+12,Single,Double,253,Available
+13,Deluxe,Double,231,Occupied
+14,Double,Twin,222,Occupied
+15,Double,Double,417,Under Maintenance
+16,Suite,Double,355,Available
+17,Suite,Double,423,Available
+18,Penthouse,Queen,479,Occupied
+19,Single,Double,416,Under Maintenance
+20,Single,Twin,179,Available
+21,Single,Single,98,Available
+22,Deluxe,Double,149,Available
+23,Double,Single,375,Available
+24,Suite,Queen,337,Occupied
+25,Single,Twin,124,Available
+26,Suite,Double,182,Occupied
+27,Deluxe,Queen,474,Occupied
+28,Single,Single,99,Occupied
+29,Deluxe,King,116,Under Maintenance
+30,Penthouse,Queen,178,Occupied
+31,Deluxe,Single,83,Occupied
+32,Deluxe,King,365,Occupied
+33,Single,King,75,Under Maintenance
+34,Deluxe,King,468,Under Maintenance
+35,Penthouse,Twin,285,Under Maintenance
+36,Suite,Single,328,Under Maintenance
+37,Double,King,143,Available
+38,Single,Twin,277,Occupied
+39,Single,Double,79,Under Maintenance
+40,Suite,Twin,119,Available
+41,Single,Double,480,Occupied
+42,Single,Double,197,Under Maintenance
+43,Penthouse,Single,278,Under Maintenance
+44,Suite,King,293,Under Maintenance
+45,Double,Twin,461,Under Maintenance
+46,Single,Single,161,Occupied
+47,Deluxe,King,439,Under Maintenance
+48,Deluxe,King,368,Available
+49,Suite,Twin,326,Under Maintenance
+50,Suite,King,269,Under Maintenance
+51,Deluxe,Single,474,Under Maintenance
+52,Double,King,457,Occupied
+53,Penthouse,King,484,Under Maintenance
+54,Penthouse,Queen,158,Occupied
+55,Double,King,368,Occupied
+56,Single,Queen,432,Available
+57,Suite,Single,417,Occupied
+58,Suite,Single,363,Occupied
+59,Penthouse,Double,261,Under Maintenance
+60,Deluxe,King,500,Under Maintenance
+61,Penthouse,Double,72,Occupied
+62,Suite,Double,489,Under Maintenance
+63,Double,Double,266,Under Maintenance
+64,Suite,King,226,Occupied
+65,Single,Double,52,Available
+66,Single,King,462,Available
+67,Single,Twin,113,Available
+68,Penthouse,King,191,Under Maintenance
+69,Suite,Queen,474,Occupied
+70,Double,Queen,395,Available
+71,Single,King,357,Available
+72,Penthouse,Queen,247,Available
+73,Single,Queen,287,Available
+74,Suite,Single,186,Occupied
+75,Double,Single,106,Available
+76,Suite,King,107,Available
+77,Single,Twin,302,Occupied
+78,Deluxe,Double,448,Under Maintenance
+79,Penthouse,King,140,Available
+80,Double,Twin,203,Under Maintenance
+81,Double,Double,385,Available
+82,Single,King,416,Under Maintenance
+83,Penthouse,King,499,Under Maintenance
+84,Penthouse,Twin,180,Occupied
+85,Single,Single,321,Occupied
+86,Deluxe,King,257,Occupied
+87,Deluxe,Double,235,Available
+88,Suite,King,212,Occupied
+89,Suite,King,305,Available
+90,Double,Double,214,Under Maintenance
+91,Deluxe,Single,449,Under Maintenance
+92,Single,Double,488,Available
+93,Penthouse,King,231,Occupied
+94,Penthouse,Twin,282,Under Maintenance
+95,Penthouse,Twin,80,Occupied
+96,Suite,Queen,127,Occupied
+97,Single,King,310,Available
+98,Penthouse,Double,203,Occupied
+99,Suite,King,473,Available
+100,Penthouse,Queen,474,Under Maintenance
