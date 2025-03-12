@@ -1,6 +1,6 @@
 # A Medallion Achitectural Data Warehouse Project
 #### Objective
-Develop a data warehouse using MYSQL to consolidate hotel reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
+Develop a data warehouse using SQL to consolidate hotel reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
 
 #### Specifications
 - **Data Sources**: Import 5 different datasets provided as CSV files
