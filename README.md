@@ -5,6 +5,7 @@ Develop a data warehouse using SQL to consolidate hotel reservation data, enabli
 #### Specifications
 - **Data Sources**: Import 5 different datasets provided as CSV files
 - **Data Cleaning**: Resolve data quality issues by employing standard cleaning techniques
+- **Data Quality Check**: To ensure schema conformity, data completeness and accuracy against business ideological context
 - **Integration**: Combine data sources into a single, easily understandable model for analytical quering
 - **Documentation**: Provide step-wise documentation of data model to support stakeholders and co-analytical teams
 
