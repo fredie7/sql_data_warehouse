@@ -24,6 +24,12 @@ Develop a data warehouse using SQL to consolidate hotel reservation data, enabli
 - Developed **fact and dimension tables** using **Star Schema** for optimized analytics.
 - Ensured data integrity and efficient **query performance**.
 
+<div align="center">
+  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Screenshot%20(17442).png?raw=true" />
+  <br>
+   <sub><b>Fig 1.</b> Workflow</sub>
+</div>
+
 ### **Table Views & Data Accessibility**
 - Created **gold-layer views** to provide structured access to refined data.
 - Managed **access control** and optimized data retrieval.
@@ -32,5 +38,10 @@ Develop a data warehouse using SQL to consolidate hotel reservation data, enabli
 - Built **SQL queries** for generating insights and business metrics.
 - Designed **dashboards** using Power BI
 
+<div align="center">
+  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Hotel%20Analysis%20Dashboard.png?raw=true" />
+  <br>
+   <sub><b>Fig 1.</b> Workflow</sub>
+</div>
 
 
