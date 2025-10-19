@@ -21,17 +21,17 @@ The project follows through with the above predefined architecture, which begins
 </div>
 
 #### THE ANALYSIS EXPLORES: 
--Measures such as: Report to show key metrics of big numbers,
--Magnitude analysis : To compare measure values accross different dimensions, identifying key contributors.
-Revenue trends: Revenue By Customers
-Seasonality analysis: Monthly Revenue Breakdown
-Room occupancy trends:  Total bookings by room type or Most frequently booked rooms
-Customer behaviour analysis: Total bookings by customer
-Ranking analysis: Top 10 Customers By Average Spend
-Cumlative analysis: aggregates the progress of data over time
-Performance analysis: Compare Average Perfromance By Year
-Part to whole analysis: Areas of highest impact
-Segmentation analysis: Customer segmentaton, Room segmentation
+- report to show key metrics of big numbers
+- magnitude analysis
+- revenue trends
+- seasonality analysis
+- room occupancy trends
+- customer behaviour analysis
+- ranking analysis
+- cumulative analysis
+- performance analysis
+- part to whole analysis
+- segmentation analysis
 
 And others such as:
 Total Number of Reservations By Nationality
