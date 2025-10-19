@@ -1,28 +1,18 @@
-# A Medallion Achitectural Data Warehouse Project
-#### Objective
-Develop a data warehouse using SQL to consolidate hotel reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
+### A Medallion Achitectural Data Warehouse Project
+Encompasses a structured data warehouse using SQL to consolidate hotel reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
 
-#### Specifications
-- **Data Sources**: Import 5 different datasets provided as CSV files
-- **Data Cleaning**: Resolve data quality issues by employing standard cleaning techniques
-- **Data Quality Check**: To ensure schema conformity, data completeness and accuracy against business ideological context
-- **Integration**: Combine data sources into a single, easily understandable model for analytical quering
-- **Documentation**: Provide step-wise documentation of data model to support stakeholders and co-analytical teams
+#### PROJECT ARCHITECTURE
+<div align="center">
+  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/sql%20warehouse%20workflow.png?raw=true" />
+  <br>
+   <sub><b></b> Model</sub>
+</div>
+
+#### PROCEDURE
+The project follows through with the above predefined architecture, which begins with importing the datasets provided as CSV files into the staging area, before being exported to the bronze layer. Data cleaning at the silver layer becomes imperative to resolve inconsistencies to ensure that every record adheres to standard quality practices. Afterward, a detailed data quality check is conducted to verify that the datasets conformed to the defined schema, maintained completeness, and reflected accuracy in line with the overall business context. \
 
 
-## **Overview**
-### **Project Management**
-- Designed a structured **workflow** to ensure a scalable data pipeline.
-- Planned **stepwise data processing** for better maintainability.
-
-### **ETL (Extract, Transform, Load)**
-- Performed **data extraction** from flat files.
-- Applied **transformations** to clean, standardize, and enrich datasets.
-- Loaded data into a **centralized data warehouse**.
-
-### **Data Modeling**
-- Developed **fact and dimension tables** using **Star Schema** for optimized analytics.
-- Ensured data integrity and efficient **query performance**.
+#### DATA MODEL
 
 <div align="center">
   <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/model.png?raw=true" />
@@ -30,13 +20,7 @@ Develop a data warehouse using SQL to consolidate hotel reservation data, enabli
    <sub><b></b> Model</sub>
 </div>
 
-### **Table Views & Data Accessibility**
-- Created **gold-layer views** to provide structured access to refined data.
-- Managed **access control** and optimized data retrieval.
-
-### **Analytics & Reporting**
-- Built **SQL queries** for generating insights and business metrics.
-- Designed **dashboards** using Power BI
+#### VISUALIZATION
 
 <div align="center">
   <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Hotel%20Analysis%20Dashboard.png?raw=true" />
