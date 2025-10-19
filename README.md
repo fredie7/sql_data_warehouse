@@ -25,9 +25,9 @@ Develop a data warehouse using SQL to consolidate hotel reservation data, enabli
 - Ensured data integrity and efficient **query performance**.
 
 <div align="center">
-  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Screenshot%20(17442).png?raw=true" />
+  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/model.png?raw=true" />
   <br>
-   <sub><b>Fig 1.</b> Workflow</sub>
+   <sub><b></b> Model</sub>
 </div>
 
 ### **Table Views & Data Accessibility**
