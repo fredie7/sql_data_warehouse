@@ -21,8 +21,8 @@ The project follows through with the above predefined architecture, which begins
 </div>
 
 #### THE ANALYSIS EXPLORES: 
-Measures such as: Report to show key metrics of big numbers,
-Magnitude analysis : To compare measure values accross different dimensions, identifying key contributors.
+-Measures such as: Report to show key metrics of big numbers,
+-Magnitude analysis : To compare measure values accross different dimensions, identifying key contributors.
 Revenue trends: Revenue By Customers
 Seasonality analysis: Monthly Revenue Breakdown
 Room occupancy trends:  Total bookings by room type or Most frequently booked rooms
