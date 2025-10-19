@@ -5,7 +5,7 @@ Encompasses a structured data warehouse using SQL to consolidate hotel reservati
 <div align="center">
   <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/sql%20warehouse%20workflow.png?raw=true" />
   <br>
-   <sub><b></b> Model</sub>
+   <sub><b></b> </sub>
 </div>
 
 #### PROCEDURE
@@ -17,7 +17,7 @@ The project follows through with the above predefined architecture, which begins
 <div align="center">
   <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/model.png?raw=true" />
   <br>
-   <sub><b></b> Model</sub>
+   <sub><b></b> </sub>
 </div>
 
 #### VISUALIZATION
@@ -25,7 +25,7 @@ The project follows through with the above predefined architecture, which begins
 <div align="center">
   <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Hotel%20Analysis%20Dashboard.png?raw=true" />
   <br>
-   <sub><b>Fig 1.</b> Workflow</sub>
+   <sub><b></b> </sub>
 </div>
 
 
