@@ -23,7 +23,7 @@ The project follows through with the above predefined architecture, which begins
 #### VISUALIZATION
 
 <div align="center">
-  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/Hotel%20Analysis%20Dashboard.png?raw=true" />
+  <img src="https://github.com/fredie7/sql_data_warehouse/blob/main/images/sql_visualization.png?raw=true" />
   <br>
    <sub><b></b> </sub>
 </div>
