@@ -34,10 +34,11 @@ The project follows through with the above predefined architecture, which begins
 - segmentation analysis
 
 And others such as:
-Total Number of Reservations By Nationality
-Top 5 Most Frequent Customers By Reservation
-Percentage trend of booked rooms
-Non-repeat customers By Name
+
+- total number of reservations by nationality
+- top 5 most frequent customers by reservation
+- percentage trend of booked rooms
+- non-repeat customers by name
 
 
 #### VISUALIZATION
