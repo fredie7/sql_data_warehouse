@@ -118,7 +118,7 @@ WHERE r.room_status = 'Occupied'
 GROUP BY r.room_type
 ORDER BY occupancy_rate DESC;
 
--- Find chun or non-repeat customers By Name
+-- Find Non-repeat customers By Name
 WITH customers AS (
     SELECT 
         c.customer_id, 
