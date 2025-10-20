@@ -1,4 +1,4 @@
-### A Medallion Achitectural Data Warehouse Project
+### A SQL-Based Medallion Achitectural Data Warehouse Project.
 Encompasses a structured data warehouse using SQL to consolidate hotel reservation data, enabling crisp analytical reporting, business intelligence and informed decision making
 
 #### PROJECT ARCHITECTURE
